@@ -10,6 +10,7 @@ Letters are case sensitive, so "a" is considered a different type of stone from 
 """
 solution using dictionary.
 """
+class Solution:
     def numJewelsInStonesDictionary(self, J, S):
         """
         :type J: str
@@ -29,7 +30,7 @@ solution using dictionary.
 """
 Solution using for-loops.
 """
-class Solution:
+class Solution2:
     def numJewelsInStones(self, J, S):
         """
         :type J: str

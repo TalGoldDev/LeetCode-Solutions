@@ -6,6 +6,29 @@ You want to know how many of the stones you have are also jewels.
 The letters in J are guaranteed distinct, and all characters in J and S are letters.
 Letters are case sensitive, so "a" is considered a different type of stone from "A".
 """
+
+"""
+solution using dictionary.
+"""
+    def numJewelsInStonesDictionary(self, J, S):
+        """
+        :type J: str
+        :type S: str
+        :rtype: int
+        """
+        counter = 0
+        stones = dict()
+        for j in range(len(J)):
+            stones[J[j]] = j
+        for i in range(len(S)):
+            if S[i] in stones:
+                    counter += 1
+                
+        return counter
+
+"""
+Solution using for-loops.
+"""
 class Solution:
     def numJewelsInStones(self, J, S):
         """
@@ -20,4 +43,3 @@ class Solution:
                     counter += 1
                 
         return counter
-       
